@@ -1,0 +1,56 @@
+{
+    "name": "processton-io/processton-data-table",
+    "description": "This package will generate data table",
+    "version": "1.0.0",
+    "keywords": [
+        "processton",
+        "processton-io",
+        "processton-data-table"
+    ],
+    "homepage": "https://github.com/processton-io/processton-data-table",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ahmad Faryab Kokab",
+            "email": "ahmadkokab@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1",
+        "processton-io/processton-interaction": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Processton\\ProcesstonDataTable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Processton\\ProcesstonDataTable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Processton\\ProcesstonDataTable\\ProcesstonDataTableServiceProvider"
+            ],
+            "aliases": {
+                "ProcesstonDataTable": "Processton\\ProcesstonDataTable\\ProcesstonDataTableFacade"
+            }
+        }
+    }
+}
